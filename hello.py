@@ -11,7 +11,7 @@ def index():
     'May', 'June', 'July', 'August', 
     'September', 'October', 'November', 'December'
 ]
-    return render_template('user.html', city='Portland, OR', months=months)
+    return render_template('index.html', city='Portland, OR', months=months)
 
 
 if __name__ == '__main__':
