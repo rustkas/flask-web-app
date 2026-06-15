@@ -5,11 +5,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     """Index"""
-    return render_template('index.html')
 
-@app.route('/user/<name>')
-def user(name):
-    """User"""
     months = [
     'January', 'February', 'March', 'April', 
     'May', 'June', 'July', 'August', 
