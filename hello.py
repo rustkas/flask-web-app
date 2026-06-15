@@ -1,15 +1,21 @@
-from flask import Flask
+"""Learning Flask"""
+from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
 def index():
     """Index"""
-    return "<h1>Hello, World!</h1>"
+    return render_template('index.html')
 
 @app.route('/user/<name>')
 def user(name):
     """User"""
-    return f"<h1>Hello, {name}!</h1>"
+    months = [
+    'January', 'February', 'March', 'April', 
+    'May', 'June', 'July', 'August', 
+    'September', 'October', 'November', 'December'
+]
+    return render_template('user.html', city='Portland, OR', months=months)
 
 
 if __name__ == '__main__':
